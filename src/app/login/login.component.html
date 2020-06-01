@@ -1,0 +1,30 @@
+<div class="pega-login-div">
+  <ion-card >
+    <ion-card-header>
+      <ion-card-title><h1>Login with Pega</h1></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form class="pega-login-form" (submit)=doLogin()>
+          <ion-item class="pega-login-full-width" lines="none"> 
+            <mat-form-field>
+              <input matInput placeholder="User Name" id="userName" type="text" [formControl]="pxTextInputControl" (change)="fieldChanged($event)">
+            </mat-form-field>
+          </ion-item>
+      </form>
+      <form class="pega-login-form" (submit)=doLogin()>
+          <ion-item class="pega-login-full-width" lines="none">
+            <mat-form-field>
+              <input matInput placeholder="Password" id="password" type="text" [formControl]="pxTextInputControl" type="password" (change)="fieldChanged($event)">
+            </mat-form-field>
+          </ion-item>
+      </form>
+    </ion-card-content>
+    <ion-card-content class="pega-login-actions">
+      <ion-item lines="none">
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)=attemptLogin() >Login</button>
+        </mat-card-actions>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>
